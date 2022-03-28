@@ -2,8 +2,14 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-:root{
+body{
+    --text-color:#000;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #f2f2f2;
+}
+ :root{
     --mainblue:#7C5DFA;
     --lightblue:#9277FF;
     --darkblue:#1E2139;
@@ -16,7 +22,9 @@
     --pink:#FF9797;
     --lightBG:#F8F8FB;
     --darkBG:#141625;
-}
+   
+} 
+
 
 /* mobile view */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -25,6 +33,7 @@ position: relative;
 width: 375px;
 height: 1319px;
 }
+/* header styling */
     .header{
 position: absolute;
 width: 375px;
@@ -48,9 +57,73 @@ display: grid;
     border-radius: 10px;
 }
 .dark{
-    background-color: var(--darkerblue);
+    background-color: var(--darkblue);
+    --text-color:#fff;
 }
-.btn__sun{
-    background-color: #EC5757;
+
+#color_mode{
+    border-right: 1px solid #6b6565;
+}
+/* newbar filter styling */
+.new_bar{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    position: absolute;
+    width: 327px;
+    height: 52px;
+    left: 24px;
+    top: 104px;
+    border: 1px solid #000;
+    color: var(--text-color);
+    padding: 10px;
+}
+/* .multiselect {
+    width: 200px;
+  } */
+  
+  .selectBox {
+    position: relative;
+   
+  }
+   .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  } 
+  #checkboxes {
+    display: none;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 192px;
+    margin-top: 20px;
+  }
+  #checkboxes label {
+    display: block;
+    padding: 10px;
+  }
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }
+.create_new label{
+    display: flex;
+    background-color: var(--mainblue);
+    width: 80px;
+    height: 35px;
+    border-radius:80px;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* padding: 5px; */
+}
+.create_new img{
+    background-color: var(--lightBG);
+    border-radius: 50px;
+    padding: 10px;
+}
+.create_new p{
+    color: var(--lightBG);
+    font-weight: 600;
 }
 }
