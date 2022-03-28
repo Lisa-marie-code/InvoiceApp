@@ -7,7 +7,7 @@
 body{
     --text-color:#000;
     font-family: 'League Spartan', sans-serif;
-    background-color: #f2f2f2;
+    background-color:var(--background);
 }
  :root{
     --mainblue:#7C5DFA;
@@ -22,7 +22,7 @@ body{
     --pink:#FF9797;
     --lightBG:#F8F8FB;
     --darkBG:#141625;
-   
+    --background:#f2f2f2;
 } 
 
 
@@ -77,10 +77,9 @@ display: grid;
     color: var(--text-color);
     padding: 10px;
 }
-/* .multiselect {
-    width: 200px;
-  } */
-  
+#invoiceNum{
+    color: var(--grayblue);
+}
   .selectBox {
     position: relative;
    
