@@ -5,12 +5,17 @@
 }
 body {
   --text-color: #000;
+  --select-background:#fff;
   font-family: "League Spartan", sans-serif;
   background-color: var(--background);
+  --filter-background:var(--filter);
 }
+
 .dark {
   background-color: var(--darkblue);
   --text-color: #fff;
+  --filter-background:#252945;
+
 }
 :root {
   --mainblue: #7c5dfa;
@@ -26,6 +31,7 @@ body {
   --lightBG: #f8f8fb;
   --darkBG: #141625;
   --background: #f2f2f2;
+  --filter:#f2f2f2;
 }
 
 /* mobile view */
@@ -76,6 +82,12 @@ body {
     color: var(--text-color);
     padding: 10px;
   }
+  select{
+    border: 0px;
+    outline: 0px;
+    font-weight: 600;
+    background-color: var(--filter);
+}
   #invoiceNum {
     color: var(--grayblue);
     line-height: 20px;
@@ -86,6 +98,7 @@ body {
   .selectBox {
     position: relative;
   }
+  
   .selectBox select option span {
     display: none;
   }
@@ -98,10 +111,11 @@ body {
   }
   #checkboxes {
     display: none;
-    border: 1px solid #000;
     background-color: #fff;
     width: 192px;
     margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: #979797 0px 4px 12px;
   }
   #checkboxes label {
     display: block;
@@ -116,6 +130,9 @@ body {
     border-radius: 80px;
     align-items: center;
     justify-content: space-around;
+  }
+  .create_new label:hover{
+   background-color: var(--midblue);
   }
   .create_new img {
     background-color: var(--lightBG);
@@ -175,6 +192,12 @@ body {
     color: var(--grayblue);
     line-height: 30px;
   }
+  select{
+      border: 0px;
+      outline: 0px;
+      font-weight: 600;
+      background-color: var(--filter);
+  }
   .selectBox {
     position: relative;
   }
@@ -188,10 +211,11 @@ body {
   }
   #checkboxes {
     display: none;
-    border: 1px solid #000;
     background-color: #fff;
     width: 192px;
     margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: #979797 0px 4px 12px;
   }
   #checkboxes label {
     display: block;
