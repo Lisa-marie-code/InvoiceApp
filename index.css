@@ -9,13 +9,16 @@ body {
   font-family: "League Spartan", sans-serif;
   background-color: var(--background);
   --filter-background:var(--filter);
+  --label-text:#000;
+  --checkbox-background:#fff;
 }
 
 .dark {
   background-color: var(--darkblue);
   --text-color: #fff;
   --filter-background:#252945;
-
+  --label-text:#fff;
+  --checkbox-background:var(--middark);
 }
 :root {
   --mainblue: #7c5dfa;
@@ -71,7 +74,6 @@ body {
   /* newbar filter styling */
   .new_bar {
     display: grid;
-    /* grid-template-columns: 2fr 2fr 1fr; */
     grid-template-columns: 127px 100px 100px;
     position: absolute;
     width: 327px;
@@ -111,7 +113,7 @@ body {
   }
   #checkboxes {
     display: none;
-    background-color: #fff;
+    background-color: var(--checkbox-background);
     width: 192px;
     margin-top: 20px;
     border-radius: 5px;
@@ -120,6 +122,7 @@ body {
   #checkboxes label {
     display: block;
     padding: 10px;
+    color:var(--label-text);
   }
   
   .create_new label {
@@ -211,7 +214,7 @@ body {
   }
   #checkboxes {
     display: none;
-    background-color: #fff;
+    background-color: var(--checkbox-background);
     width: 192px;
     margin-top: 20px;
     border-radius: 5px;
@@ -220,6 +223,7 @@ body {
   #checkboxes label {
     display: block;
     padding: 10px;
+    color:var(--label-text);
   }
   .create_new label {
     display: flex;
