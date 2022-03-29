@@ -1,73 +1,72 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    --text-color:#000;
-    font-family: 'League Spartan', sans-serif;
-    background-color:var(--background);
+body {
+  --text-color: #000;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--background);
 }
- :root{
-    --mainblue:#7C5DFA;
-    --lightblue:#9277FF;
-    --darkblue:#1E2139;
-    --middark:#252945;
-    --lightblue:#DFE3FA;
-    --grayblue:#888EB0;
-    --midblue:#7E88C3;
-    --darkerblue:#0C0E16;
-    --peach:#EC5757;
-    --pink:#FF9797;
-    --lightBG:#F8F8FB;
-    --darkBG:#141625;
-    --background:#f2f2f2;
-} 
-
+.dark {
+    background-color: var(--darkblue);
+    --text-color: #fff;
+  }
+:root {
+  --mainblue: #7c5dfa;
+  --lightblue: #9277ff;
+  --darkblue: #1e2139;
+  --middark: #252945;
+  --lightblue: #dfe3fa;
+  --grayblue: #888eb0;
+  --midblue: #7e88c3;
+  --darkerblue: #0c0e16;
+  --peach: #ec5757;
+  --pink: #ff9797;
+  --lightBG: #f8f8fb;
+  --darkBG: #141625;
+  --background: #f2f2f2;
+}
 
 /* mobile view */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-.container{
-position: relative;
-width: 375px;
-height: 1319px;
-}
-/* header styling */
-    .header{
-position: absolute;
-width: 375px;
-height: 72px;
-left: 0px;
-top: 0px;
-background-color: var(--middark);
-display: grid;
- grid-template-columns: 1fr 2fr 1fr 1fr; 
+  .container {
+    position: relative;
+    width: 375px;
+    height: 1319px;
+  }
+  /* header styling */
+  .header {
+    position: absolute;
+    width: 375px;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    background-color: var(--middark);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  }
 
-}
-.user img{
+  .user img {
     border-radius: 50%;
     width: 40%;
-}
-.header div * {
-        margin: 20px auto 0 20px; 
-}
-#logo{
+  }
+  .header div * {
+    margin: 20px auto 0 20px;
+  }
+  #logo {
     background-color: var(--midblue);
     border-radius: 10px;
-}
-.dark{
-    background-color: var(--darkblue);
-    --text-color:#fff;
-}
-
-#color_mode{
+  }
+  
+  #color_mode {
     border-right: 1px solid #6b6565;
-}
-/* newbar filter styling */
-.new_bar{
+  }
+  /* newbar filter styling */
+  .new_bar {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    /* grid-template-columns: 2fr 2fr 1fr; */
+    grid-template-columns: 127px 100px 100px;
     position: absolute;
     width: 327px;
     height: 52px;
@@ -76,21 +75,23 @@ display: grid;
     border: 1px solid #000;
     color: var(--text-color);
     padding: 10px;
-}
-#invoiceNum{
+  }
+  #invoiceNum {
     color: var(--grayblue);
-}
+  }
   .selectBox {
     position: relative;
-   
   }
-   .overSelect {
+  .selectBox select option span{
+      display: none;
+  }
+  .overSelect {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-  } 
+  }
   #checkboxes {
     display: none;
     border: 1px solid #000;
@@ -105,24 +106,53 @@ display: grid;
   #checkboxes label:hover {
     background-color: #1e90ff;
   }
-.create_new label{
+  .create_new label {
     display: flex;
     background-color: var(--mainblue);
     width: 80px;
     height: 35px;
-    border-radius:80px;
+    border-radius: 80px;
     align-items: center;
-    /* justify-content: space-between; */
     justify-content: space-around;
-    /* padding: 5px; */
-}
-.create_new img{
+  }
+  .create_new img {
     background-color: var(--lightBG);
     border-radius: 50px;
     padding: 10px;
-}
-.create_new p{
+  }
+  .create_new p {
     color: var(--lightBG);
     font-weight: 600;
+  }
 }
+
+/* tablet view */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    position: relative;
+    width: 768px;
+    height: 1024px;
+  }
+  .header{
+    position: absolute;
+    width: 768px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background-color: var(--middark);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    border: 1px solid #fff;
+  }
+  .header div * {
+    margin: 30px auto 0 50px;
+  }
+  #logo {
+    background-color: var(--midblue);
+    border-radius: 10px;
+  }
+  .user img {
+    border-radius: 50%;
+    width: 25%;
+  }
 }
