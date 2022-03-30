@@ -1,9 +1,12 @@
 // changing body theme to dark
 const body = document.querySelector("body");
 const colorTheme = document.getElementById("#color_mode");
+const moon_mode = document.getElementById("#moon");
+
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
+  moon_mode.style.display = 'none';
 
 }
 colorTheme.addEventListener("click", toggleTheme);

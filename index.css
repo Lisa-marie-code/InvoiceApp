@@ -20,6 +20,7 @@ body {
   --label-text:#fff;
   --checkbox-background:var(--middark);
 }
+
 :root {
   --mainblue: #7c5dfa;
   --lightblue: #9277ff;
