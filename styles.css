@@ -1,0 +1,96 @@
+body{
+    background-color: #F2F2F2;
+}
+
+
+.card{
+    margin: 20px auto 0 auto;
+    width: 320px;
+    height: 130px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.idenNum{
+   
+    position: relative;
+    top: 5px;
+    left: 24px; 
+    display: inline-block; 
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+
+}
+.dueDate{
+   
+    position: relative;
+    top: 40px;
+    left: -15px; 
+    display: inline-block; 
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7E88C3;
+    letter-spacing: -0.25px;
+}
+
+.amt{
+    position: relative;
+    top: 70px;
+    left: -70px;
+    display: inline-block;  
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+    color: #0C0E16;
+}
+
+.client{
+    position: relative;
+    top: 5px;
+    left: 80px;
+    display: inline-block; 
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: -0.25px;
+    color: #858BB2;
+}
+
+
+
+.payment{
+    position: absolute;
+    top: 50px;
+    left: 180px; 
+    width: 104px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    background: #e4f7f0;
+    color: #33D69F;
+   
+
+} 
