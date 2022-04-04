@@ -65,10 +65,6 @@ $(document).ready(function(){
          amount.innerText = '£' + value.total;
          invoiceCard.appendChild(amount);
 
-      //    let name = document.createElement('div');
-      //    name.id = 'buttonOne';
-      //    invoiceCard.appendChild(name);
-
          let nameStatus = document.createElement('div');
          nameStatus.className = 'client';
          nameStatus.innerText = value.clientName;
