@@ -6,10 +6,8 @@ const moon_mode = document.getElementById("#moon");
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
-  moon_mode.style.display = 'none';
-
 }
-// colorTheme.addEventListener("click", toggleTheme);
+
 
 //filtering bar
 var expanded = false;
@@ -49,7 +47,7 @@ $(document).ready(function(){
 
          let due = document.createElement('div');
          due.className = 'dueDate';
-         due.innerText = value.paymentDue;
+         due.innerText = 'Due'+ '  '+ value.paymentDue;
          invoiceCard.appendChild(due);
 
          let amount = document.createElement('div');

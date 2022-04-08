@@ -6,7 +6,6 @@ const moon_mode = document.getElementById("#moon");
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
-  
 }
 
 
