@@ -44,7 +44,7 @@ body {
   .card{
     margin: 20px auto 0 auto;
     width: 320px;
-    height: 110px;
+    height: 130px;
     border-radius: 5px;
     background-color: #ffffff;
      position: relative; 
@@ -86,7 +86,7 @@ body {
   .amt{
     position: relative;
     top: 70px;
-    left: -90px;
+    left: -70px;
     display: inline-block;  
     font-family: 'Spartan';
     font-style: normal;
@@ -97,13 +97,6 @@ body {
     color: #0C0E16;
   }
   
-  .st-div{
-    margin-top: 100px;
-    width: 327px;
-    height: 91px;
-    border: 1px solid red;
-    background-color: white;
-  }
   .client{
     position: relative;
     top: 5px;
@@ -348,5 +341,4 @@ body {
   }
   
 }
-
 
