@@ -6,9 +6,9 @@ const moon_mode = document.getElementById("#moon");
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
-  moon_mode.style.display = 'none';
+  
 }
-colorTheme.addEventListener("click", toggleTheme);
+
 
 //filtering bar
 var expanded = false;
@@ -25,9 +25,9 @@ function showCheckboxes() {
 }
 
 
-// let statusDivContainer = document.createElement('div');
-//     statusDivContainer.className = 'st-div';
-//     document.body.appendChild(statusDivContainer);
+let statusDivContainer = document.createElement('div');
+    statusDivContainer.className = 'st-div';
+    document.body.appendChild(statusDivContainer);
 
 
   $(document).ready(function(){

@@ -8,9 +8,9 @@ const moon_mode = document.getElementById("#moon");
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
-  moon_mode.style.display = 'none';
+  
 }
-colorTheme.addEventListener("click", toggleTheme);
+
 
 //filtering bar
 var expanded = false;
@@ -43,12 +43,12 @@ $(document).ready(function(){
           // document.body.appendChild(invoiceCard);
           main_container.appendChild(invoiceCard);
 
-        // // invoiceCard.addEventListener('click', () => {
-        // //     main_container.innerHTML = statusDivContainer.innerHTML;
-        // //     console.log(invoiceCard);
+        invoiceCard.addEventListener('click', () => {
+            main_container.innerHTML = statusDivContainer.innerHTML;
+            console.log(invoiceCard);
         
           
-        // });
+        });
 
           let code = document.createElement('div');
           code.className = 'idenNum';

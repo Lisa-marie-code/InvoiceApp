@@ -98,6 +98,7 @@ body {
   }
   
   .st-div{
+    margin-top: 100px;
     width: 327px;
     height: 91px;
     border: 1px solid red;
