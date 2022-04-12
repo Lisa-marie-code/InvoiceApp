@@ -3,10 +3,13 @@
 const body = document.querySelector("body");
 const colorTheme = document.getElementById("#color_mode");
 const moon_mode = document.getElementById("#moon");
+const plusButton = document.getElementById('#newButton');
+
 
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
+  
 }
 
 

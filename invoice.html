@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
    
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="new.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <title>Invoice App</title>
@@ -18,7 +19,7 @@
      <!-- header -->
      <div class="header">
          <div id="logo">
-             <img src="/InvoiceApp/starter-code/logo.svg" alt="">
+             <img src="/starter-code/logo.svg" alt="">
          </div>
          <div class="headSpace">
              
@@ -28,7 +29,7 @@
                
          </div>
          <div class="user">
-             <img src="/InvoiceApp/starter-code/image-avatar.jpg" alt="">
+             <img src="/starter-code/image-avatar.jpg" alt="">
          </div>
      </div>
 
@@ -64,7 +65,7 @@
 
     <div class="create_new">
     <label for="new">
-        <img src="/InvoiceApp/starter-code/icon-plus.svg" alt="">
+        <img src="/starter-code/icon-plus.svg" alt="" id ="newButton" onclick="openNew()">
         <p>New <span>Invoice</span></p>
     </label>
     </div>
@@ -74,6 +75,13 @@
 
      </div>
       <!-- end of filter bar -->
+
+   
+      <div id="popup" class="overlay">
+        </div>
+   
+   
+   
     </div>
 
 
@@ -86,5 +94,6 @@
     
 
 <script src="index.js"></script>
+<script src="new.js"></script>
 </body>
 </html>

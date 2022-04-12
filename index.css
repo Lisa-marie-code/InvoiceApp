@@ -12,6 +12,7 @@ body {
   --label-text: #000;
   --checkbox-background: #fff;
   --cardBG: #fff;
+  --overlayColor:rgba(0, 0, 0, 0.5);
 }
 
 .dark {
