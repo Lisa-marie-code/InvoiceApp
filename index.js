@@ -4,6 +4,8 @@ const body = document.querySelector("body");
 const colorTheme = document.getElementById("#color_mode");
 const moon_mode = document.getElementById("#moon");
 const plusButton = document.getElementById('#newButton');
+const overlayField = document.getElementById('popup');
+
 
 
 
@@ -12,6 +14,9 @@ function toggleTheme() {
   
 }
 
+ const openNew = () => {
+ overlayField.style.display = 'block';
+};
 
 //filtering bar
 var expanded = false;

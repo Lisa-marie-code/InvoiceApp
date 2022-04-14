@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
-   
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="new.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="new.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <title>Invoice App</title>
-</head>
-<body >
+  </head>
+  <body>
     <div class="container">
-     <!-- header -->
-     <div class="header">
-         <div id="logo">
-             <img src="/starter-code/logo.svg" alt="">
-         </div>
-         <div class="headSpace">
-             
-         </div>
-         <div  id="color_mode" onclick="toggleTheme()">
-                <svg id="moon" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.502 11.342a.703.703 0 00-.588.128 7.499 7.499 0 01-2.275 1.33 7.123 7.123 0 01-2.581.46A7.516 7.516 0 018.74 11.06a7.516 7.516 0 01-2.198-5.316c0-.87.153-1.713.41-2.48.28-.817.69-1.559 1.226-2.197a.652.652 0 00-.102-.92.703.703 0 00-.588-.128C5.316.607 3.425 1.91 2.07 3.649A10.082 10.082 0 000 9.783C0 12.57 1.125 15.1 2.965 16.94a10.04 10.04 0 007.156 2.965c2.352 0 4.524-.818 6.262-2.173a10.078 10.078 0 003.579-5.597.62.62 0 00-.46-.793z" fill="#7E88C3" fill-rule="nonzero"/></svg>
-               
-         </div>
-         <div class="user">
-             <img src="/starter-code/image-avatar.jpg" alt="">
-         </div>
-     </div>
+      <!-- header -->
+      <div class="header">
+        <div id="logo">
+          <img src="/starter-code/logo.svg" alt="" />
+        </div>
+        <div class="headSpace"></div>
+        <div id="color_mode" onclick="toggleTheme()">
+          <svg
+            id="moon"
+            width="20"
+            height="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.502 11.342a.703.703 0 00-.588.128 7.499 7.499 0 01-2.275 1.33 7.123 7.123 0 01-2.581.46A7.516 7.516 0 018.74 11.06a7.516 7.516 0 01-2.198-5.316c0-.87.153-1.713.41-2.48.28-.817.69-1.559 1.226-2.197a.652.652 0 00-.102-.92.703.703 0 00-.588-.128C5.316.607 3.425 1.91 2.07 3.649A10.082 10.082 0 000 9.783C0 12.57 1.125 15.1 2.965 16.94a10.04 10.04 0 007.156 2.965c2.352 0 4.524-.818 6.262-2.173a10.078 10.078 0 003.579-5.597.62.62 0 00-.46-.793z"
+              fill="#7E88C3"
+              fill-rule="nonzero"
+            />
+          </svg>
+        </div>
+        <div class="user">
+          <img src="/starter-code/image-avatar.jpg" alt="" />
+        </div>
+      </div>
 
-     <!-- filter bar -->
-     <div class="new_bar">
-     <div class="invoices">
-         <h3>Invoices</h3>
-         <p id="invoiceNum"><span>There are </span> 7 Invoices</p>
-     </div>
+      <!-- filter bar -->
+      <div class="new_bar">
+        <div class="invoices">
+          <h3>Invoices</h3>
+          <p id="invoiceNum"><span>There are </span> 7 Invoices</p>
+        </div>
 
-     <div class="filter">
-        <form>
+        <div class="filter">
+          <form>
             <div class="multiselect">
               <div class="selectBox" onclick="showCheckboxes()">
                 <select>
@@ -51,49 +62,95 @@
               </div>
               <div id="checkboxes">
                 <label for="one">
-                  <input type="checkbox" id="one" />Draft</label>
+                  <input type="checkbox" id="one" />Draft</label
+                >
                 <label for="two">
-                  <input type="checkbox" id="two" />Pending</label>
+                  <input type="checkbox" id="two" />Pending</label
+                >
                 <label for="three">
-                  <input type="checkbox" id="three" />Paid</label>
+                  <input type="checkbox" id="three" />Paid</label
+                >
               </div>
             </div>
           </form>
-          
+        </div>
 
-     </div>
-
-    <div class="create_new">
-    <label for="new">
-        <img src="/starter-code/icon-plus.svg" alt="" id ="newButton" onclick="openNew()">
-        <p>New <span>Invoice</span></p>
-    </label>
-    </div>
-
-
-
-
-     </div>
+        <div class="create_new">
+          <label for="new">
+            <img
+              src="/starter-code/icon-plus.svg"
+              alt=""
+              id="newButton"
+              onclick="openNew()"
+            />
+            <p>New <span>Invoice</span></p>
+          </label>
+        </div>
+      </div>
       <!-- end of filter bar -->
 
-   
       <div id="popup" class="overlay">
+        <div class="new_main">
+          <h3>New Invoice</h3>
+          <form action="post" class="hold_form">
+            <h5>Bill From</h5>
+            <label for="street">Street Address</label><br />
+            <input type="text" id="street" name="streetAddress" />
+            <!-- city -->
+            <div class="cities">
+              <label for="city">City</label>
+              <input type="text" id="city" name="City" />
+
+              <label for="postcode">Post Code</label>
+            <input type="text" id="postcode" name="postcode" />
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="Country" />
+            </div>
+            <!-- end of billfrom -->
+            <h5>Bill To</h5>
+            <label for="client">Client's Name</label><br />
+            <input type="text" id="client" name="Client" />
+            <label for="email" style="margin-top: 10px;">Client's Email</label><br />
+            <input type="text" id="email" name="email" placeholder="e.g@example@gmail.com" />
+            <label for="street1" style="margin-top: 10px;">Street Address</label><br />
+            <input type="text" id="street1" name="streetAddress1" />
+            <div class="cities1">
+              <label for="city1">City</label>
+              <input type="text" id="city1" name="City1" />
+
+              <label for="postcode1">Post Code</label>
+            <input type="text" id="postcode1" name="postcode1" />
+
+            <label for="country1">Country</label>
+            <input type="text" id="country1" name="Country1" />
+            </div>
+            <!-- end of billto -->
+            <div class="invoice">
+              <label for="date">Invoice Date</label>
+            <input type="date" id="invoiceDate" name="invoice" />
+
+              <label for="payment" style=" margin-left: 50px;">Payment Terms</label>
+            <select name="netdays" id="netdays">
+              <option value="net1">Net 1 Day</option>
+            <option value="net2">Net 7 Days</option>
+            <option value="net3">Net 14 Days</option>
+            <option value="net4">Net 30 Days</option>
+            </select>
+
+            <label for="project">Project Description</label>
+            <input type="text" id="project" name="project" placeholder="e.g Graphic Design Service"/>
+
+            </div>
+           
+
+
+          </form>
         </div>
-   
-   
-   
+      </div>
     </div>
 
-
-
-
-
-
-
-   
-    
-
-<script src="index.js"></script>
-<script src="new.js"></script>
-</body>
+    <script src="index.js"></script>
+    <script src="new.js"></script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-@import "index.css";
+ @import "index.css";
 
 .overlay {
   width: 100%;
@@ -16,7 +16,7 @@
 .new_main {
   position: absolute;
   width: 560px;
-  height: 100vh;
+  height: 100%;
   left: 104px;
   top: 0px;
   border-top-right-radius: 20px;
@@ -28,17 +28,52 @@
 }
 .hold_form {
   border: 1px solid #000;
-  width: 80%;
-  height: 92%;
+  width: 90%;
+  height: 95%;
   margin: 10px auto 0 auto;
+  padding: 10px;
 }
 .StreetAddress,
 .CName,
 .cemail {
   width: 90%;
   height: 40px;
-  margin: 20px;
+  margin: 15px;
 }
+.cities,.cities1{
+  margin-top: 10px;
+}
+.new_main h5{
+  line-height: 30px;
+}
+.invoice{
+  margin-top: 20px;
+}
+.invoice select{
+  background-color: #fff;
+  border: 1px solid #dfe3fa;
+}
+.invoice select option{
+  background-color: var(--checkbox-background);
+}
+#city,#postcode,#country{
+  height: 40px;
+  width: 100px;
+}
+#city1,#postcode1,#country1
+,#invoiceDate,#netdays{
+  height: 40px;
+  width: 100px;
+}
+
+#street,#client,
+#email,#street1,#project{
+  width: 100%;
+  height: 40px;
+}
+
+
+
 .newForm {
   display: grid;
 }
@@ -48,7 +83,6 @@ input {
 .City,
 .PostCode,
 .Country {
-  /* display: grid; */
   width: 100px;
   height: 40px;
   margin-left: 35px;
@@ -59,7 +93,11 @@ input {
   width: 100px;
   height: 40px;
   margin-left: 35px;
-}
+} 
+
+
+
+
 /* @media only screen and (min-width: 481px) and (max-width: 768px) {
 
 } */
