@@ -1,23 +1,25 @@
  @import "index.css";
 
 .overlay {
-  width: 100%;
+  width: 94%;
   height: 100%;
+  /* height: 1299px; */
   margin: auto;
   position: fixed;
   display: none;
   top: 0;
-  left: 0;
+  left: 103px;
   right: 0;
   bottom: 0;
   background-color: var(--overlayColor);
   z-index: 2;
 }
 .new_main {
-  position: absolute;
+  /* position: absolute; */
   width: 560px;
-  height: 100%;
-  left: 104px;
+  /* height: 100%; */
+  height: 1299px;
+  /* left: 103px; */
   top: 0px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -45,6 +47,7 @@
 }
 .new_main h5{
   line-height: 30px;
+  color: var(--mainblue);
 }
 .invoice{
   margin-top: 20px;
@@ -55,6 +58,22 @@
 }
 .invoice select option{
   background-color: var(--checkbox-background);
+}
+.item{
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr 2fr;
+  margin-top: 20px;
+}
+#addNew{
+padding: 10px;
+width: 100%;
+margin: 5px auto 0 0;
+border-radius: 20px;
+border: none;
+background-color: var(--lightblue);
+cursor: pointer;
+text-align: center;
+
 }
 #city,#postcode,#country{
   height: 40px;
@@ -94,10 +113,29 @@ input {
   height: 40px;
   margin-left: 35px;
 } 
-
-
-
-
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 50px;
+  padding: 20px;
+}
+.buttons button{
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+}
+#discard{
+background-color: var(--lightblue);
+color: var(--mainblue);
+}
+#save{
+background-color: var(--darkerblue);
+color: var(--lightblue);
+}
+#send{
+  background-color: var(--mainblue);
+  color: var(--select-background);
+}
 /* @media only screen and (min-width: 481px) and (max-width: 768px) {
 
 } */

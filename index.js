@@ -5,19 +5,22 @@ const colorTheme = document.getElementById("#color_mode");
 const moon_mode = document.getElementById("#moon");
 const plusButton = document.getElementById('#newButton');
 const overlayField = document.getElementById('popup');
+const itemButton = document.getElementById('#addNew');
 
 
 
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
-  
 }
 
  const openNew = () => {
  overlayField.style.display = 'block';
 };
 
+const added = () =>{
+itemButton.style.width = '500px';
+}
 //filtering bar
 var expanded = false;
 

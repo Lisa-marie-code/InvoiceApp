@@ -107,6 +107,7 @@
             <label for="country">Country</label>
             <input type="text" id="country" name="Country" />
             </div>
+
             <!-- end of billfrom -->
             <h5>Bill To</h5>
             <label for="client">Client's Name</label><br />
@@ -125,6 +126,7 @@
             <label for="country1">Country</label>
             <input type="text" id="country1" name="Country1" />
             </div>
+
             <!-- end of billto -->
             <div class="invoice">
               <label for="date">Invoice Date</label>
@@ -140,6 +142,21 @@
 
             <label for="project">Project Description</label>
             <input type="text" id="project" name="project" placeholder="e.g Graphic Design Service"/>
+
+            <!-- start of item -->
+             <div class="item">
+             <p>Item Name</p>
+             <p>Qty</p>
+             <p>Price</p>
+             <p>Total</p>
+             </div>
+               <div id = "addNew" onclick="added()"><img src="/starter-code/icon-plus.svg" alt="">Add new Item</div>
+                
+               <div class="buttons">
+                 <button id="discard">Discard</button>
+                 <button id ="save">Save as draft</button>
+                 <button id="send">Save & Send</button>
+               </div>
 
             </div>
            

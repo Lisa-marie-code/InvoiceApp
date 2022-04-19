@@ -54,6 +54,8 @@ body {
   position: absolute;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr 1fr;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .user img {
   border-radius: 50%;
