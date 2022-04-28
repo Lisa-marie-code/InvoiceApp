@@ -19,9 +19,7 @@
 .new_main {
   position: absolute;
   width: 560px;
-  /* height: 100%; */
   height: 1299px;
-  /* left: 103px; */
   top: 0px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -102,15 +100,27 @@
 }
 .item{
   display: grid;
-  grid-template-columns: 3fr 1fr 2fr 2fr;
+  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
   margin-top: 30px;
 }
-
+.invoice .list1{
+  /* display: block;/ */
+  width: 80%;
+}
+.invoice .list2{
+  width: 80%;
+}
+.invoice .list3{
+  width: 80%;
+}
+.invoice .list4{
+  width: 70%;
+}
 /* buttons */
 #addNew{
 padding: 10px;
 width: 100%;
-margin: 5px auto 0 0;
+margin: 20px auto 0 0;
 border-radius: 20px;
 border: none;
 background-color: var(--lightblue);

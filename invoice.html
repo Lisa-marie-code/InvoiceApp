@@ -89,6 +89,8 @@
       </div>
       <!-- end of filter bar -->
 
+
+      <!-- overlay and form -->
       <div id="popup" class="overlay">
         <div class="new_main">
           <h2>New Invoice</h2>
@@ -181,9 +183,29 @@
              <p>Qty</p>
              <p>Price</p>
              <p>Total</p>
+             <p></p>
+  
+
+               <div class="list1">
+                <input type="text" id="client" name="Client" />
+               </div>
+               <div class="list2">
+                <input type="text" id="client" name="Client" />
+               </div>
+               <div class="list3">
+                <input type="text" id="client" name="Client" />
+               </div>
+               <div class="list4">
+                <input type="text" id="client" name="Client" />
+               </div>
+               <div class="list5">
+                <img src="/starter-code/icon-delete.svg" alt="">
+               </div>
              </div>
+
                <div id = "addNew" onclick ="added()" ><img src="/starter-code/icon-plus.svg" alt="">Add new Item</div>
-                
+                <!-- end of item -->
+
                <div class="buttons">
                  <button id="discard" type="submit">Discard</button>
                  <button id ="save" type="submit">Save as draft</button>
@@ -200,6 +222,8 @@
           </form>
         </div>
       </div>
+       <!-- end of overlay -->
+
     </div>
 
     <script src="index.js"></script>
