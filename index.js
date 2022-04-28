@@ -18,9 +18,14 @@ function toggleTheme() {
  overlayField.style.display = 'block';
 };
 
-const added = () =>{
-itemButton.style.width = '500px';
+function added(){
+  itemButton.style.backgroundColor = 'red';
 }
+
+// const added = () => {
+// itemButton.style.backgroundColor = 'red';
+// }
+
 //filtering bar
 var expanded = false;
 

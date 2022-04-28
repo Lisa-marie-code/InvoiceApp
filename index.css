@@ -64,6 +64,10 @@ body {
 .header div * {
   margin: 40px auto 0 30px;
 }
+.card:hover{
+  border: 2px solid var(--mainblue);
+  cursor: pointer;
+}
 #logo {
   background-color: var(--midblue);
   border-bottom-left-radius: 10px;
@@ -83,7 +87,6 @@ body {
   height: 59px;
   left: 355px;
   top: 72px;
-  border: 1px solid #000;
   padding: 10px;
 }
 select {
@@ -97,7 +100,7 @@ select {
   line-height: 20px;
 }
 .invoices p span {
-  display: none;
+  display: inline-block;
 }
 .selectBox {
   position: relative;
@@ -130,12 +133,11 @@ select {
 .create_new label {
   display: flex;
   background-color: var(--mainblue);
-  width: 150px;
+  width: 140px;
   height: 38px;
   border-radius: 80px;
   align-items: center;
-  padding: 10px;
-  justify-content: space-between;
+  padding: 5px;
 }
 .create_new label:hover {
   background-color: var(--midblue);
@@ -149,6 +151,7 @@ select {
 .create_new p {
   color: var(--lightBG);
   font-weight: 600;
+  padding: 10px;
 }
 /* Invoice */
 .card{
@@ -312,7 +315,6 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     height: 52px;
     left: 24px;
     top: 104px;
-    border: 1px solid #000;
     color: var(--text-color);
     padding: 10px;
   }
@@ -325,6 +327,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .create_new p span {
     display: none;
   }
+  
 }
 
 /* tablet view */
@@ -397,7 +400,6 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     height: 59px;
     left: 48px;
     top: 136px;
-    border: 1px solid #000;
     color: var(--text-color);
     padding: 10px;
   }
@@ -408,12 +410,10 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .create_new label {
     display: flex;
     background-color: var(--mainblue);
-    width: 150px;
+    width: 140px;
     height: 38px;
     border-radius: 80px;
     align-items: center;
-    justify-content: space-around;
-    
   }
   .create_new img {
     background-color: var(--lightBG);
