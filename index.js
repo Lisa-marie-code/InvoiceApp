@@ -3,12 +3,28 @@
 const body = document.querySelector("body");
 const colorTheme = document.getElementById("#color_mode");
 const moon_mode = document.getElementById("#moon");
+const plusButton = document.getElementById('#newButton');
+const overlayField = document.getElementById('popup');
+const itemButton = document.getElementById('#addNew');
+
+
 
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
 
+ const openNew = () => {
+ overlayField.style.display = 'block';
+};
+
+function added(){
+  itemButton.style.backgroundColor = 'red';
+}
+
+// const added = () => {
+// itemButton.style.backgroundColor = 'red';
+// }
 
 //filtering bar
 var expanded = false;
@@ -72,8 +88,13 @@ $(document).ready(function(){
          
          let round = document.createElement('span');
          round.className = 'roundStatus';
+         round.style.backgroundColor = value.hex;
          pay.appendChild(round);
 
+         let arrow = document.createElement('div');
+         arrow.className = 'arrowImage';
+         arrow.innerHTML = `<svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>`;
+         invoiceCard.appendChild(arrow);
         
       });
       
