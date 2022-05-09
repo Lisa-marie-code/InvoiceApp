@@ -170,13 +170,20 @@ input {
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 50px;
   padding: 20px;
+
 }
 .buttons button{
   padding: 10px;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
-
+.buttons input{
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
 #discard{
 background-color: var(--lightblue);
 color: var(--mainblue);
@@ -188,6 +195,9 @@ color: var(--lightblue);
 #send{
   background-color: var(--mainblue);
   color: var(--select-background);
+}
+.list5 img:hover{
+cursor: pointer;
 }
 /* @media only screen and (min-width: 481px) and (max-width: 768px) {
 

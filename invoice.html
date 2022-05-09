@@ -94,26 +94,26 @@
       <div id="popup" class="overlay">
         <div class="new_main">
           <h2>New Invoice</h2>
-          <form action="post" class="hold_form">
+          <form action="POST" class="hold_form">
             <h5>Bill From</h5>
             <label for ="street" class="streetAdd">Street Address</label><br />
-            <input type="text" id="street" name="streetAddress" />
+            <input type="text" id="street" name="streetAddress" class="input_group" />
             <!-- city -->
 
             <div class="cities">
               <div class="firstCity">
                 <label for="city">City</label>
-              <input type="text" id="city" name="City"/> 
+              <input type="text" id="city" name="City" class="input_group"/> 
               </div>
              
                <div class="firstCode">
                 <label for="postcode">Post Code</label>
-                <input type="text" id="postcode" name="postcode"/>
+                <input type="text" id="postcode" name="postcode" class="input_group"/>
                </div>
              
                 <div class="firstCoun">
                   <label for="country">Country</label>
-                  <input type="text" id="country" name="Country"/>
+                  <input type="text" id="country" name="Country" class="input_group"/>
                 </div>
             </div>
 
@@ -121,33 +121,33 @@
             <h5>Bill To</h5>
             <div class="client">
               <label for="client">Client's Name</label>
-            <input type="text" id="client" name="Client" />
+            <input type="text" id="client" name="Client" class="input_group"/>
             </div>
              <div class="email">
               <label for="email" >Client's Email</label>
-            <input type="text" id="email" name="email" placeholder="e.g@example@gmail.com" />
+            <input type="text" id="email" name="email" placeholder="e.g@example@gmail.com" class="input_group" />
              </div>
             <div class="street">
               <label for="street1" >Street Address</label>
-              <input type="text" id="street1" name="streetAddress1" />
+              <input type="text" id="street1" name="streetAddress1" class="input_group"/>
             </div>
             
 
             <div class="cities1">
               <div class="secondCity">
                 <label for="city1">City</label>
-                <input type="text" id="city1" name="City1" />
+                <input type="text" id="city1" name="City1" class="input_group"/>
   
               </div>
             
               <div class="secondCode">
                 <label for="postcode1">Post Code</label>
-                <input type="text" id="postcode1" name="postcode1" />
+                <input type="text" id="postcode1" name="postcode1" class="input_group" />
               </div>
              
               <div class="secondCoun">
                 <label for="country1">Country</label>
-                <input type="text" id="country1" name="Country1" />
+                <input type="text" id="country1" name="Country1" class="input_group"/>
               </div>
             
             </div>
@@ -157,7 +157,7 @@
 
               <div class="calendar">
                 <label for="date">Invoice Date</label>
-            <input type="date" id="invoiceDate" name="invoice" />
+            <input type="date" id="invoiceDate" name="invoice" class="input_group" />
               </div>
               
              <div class="netdays">
@@ -172,7 +172,7 @@
               
               <div class="project">
                 <label for="project" >Project Description</label>
-                <input type="text" id="project" name="project" placeholder="e.g Graphic Design Service"/>
+                <input type="text" id="project" name="project" placeholder="e.g Graphic Design Service" class="input_group"/>
     
               </div>
             
@@ -187,29 +187,31 @@
   
 
                <div class="list1">
-                <input type="text" id="client" name="Client" />
+                <input type="text" id="client" name="Client" class="input_group"/>
                </div>
                <div class="list2">
-                <input type="text" id="client" name="Client" />
+                <input type="text" id="client" name="Client" class="input_group"/>
                </div>
                <div class="list3">
-                <input type="text" id="client" name="Client" />
+                <input type="text" id="client" name="Client" class="input_group"/>
                </div>
                <div class="list4">
-                <input type="text" id="client" name="Client" />
+                <input type="text" id="client" name="Client" class="input_group"/>
                </div>
                <div class="list5">
                 <img src="/starter-code/icon-delete.svg" alt="">
                </div>
              </div>
 
-               <div id = "addNew" onclick ="added()" ><img src="/starter-code/icon-plus.svg" alt="">Add new Item</div>
+               <div id ="addNew" onclick ="addList()" ><img src="/starter-code/icon-plus.svg" alt="">Add new Item</div>
                 <!-- end of item -->
 
                <div class="buttons">
-                 <button id="discard" type="submit">Discard</button>
+                 <!-- <button id="discard" type="submit" onclick="clearMyFields()">Discard</button> -->
+                 <input type="button" name="Discard" value="Discard" onclick="clearMyFields()">
                  <button id ="save" type="submit">Save as draft</button>
                  <button id="send" type="submit">Save & Send</button>
+                 
                </div>
 
             </div>

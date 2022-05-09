@@ -6,25 +6,22 @@ const moon_mode = document.getElementById("#moon");
 const plusButton = document.getElementById('#newButton');
 const overlayField = document.getElementById('popup');
 const itemButton = document.getElementById('#addNew');
+const clearInput = document.getElementsByClassName('.input_group');
 
 
-
-
+//darkmode
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
 
+//overlay
  const openNew = () => {
  overlayField.style.display = 'block';
 };
-
-function added(){
-  itemButton.style.backgroundColor = 'red';
+//New list
+function addList(){
+  itemButton.innerHTML = 'new';
 }
-
-// const added = () => {
-// itemButton.style.backgroundColor = 'red';
-// }
 
 //filtering bar
 var expanded = false;
@@ -39,6 +36,18 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+
+//discarding inputFields
+function clearMyFields(){
+  var clearInput = document.getElementsByClassName("input_group");
+  for(var i= 0, c=clearInput.length; i<c; i++){
+   clearInput[i].value = "";
+  }
+  console.log('Lee');
+}
+
+
+
 
 // json
 let main_container = document.createElement('div');
