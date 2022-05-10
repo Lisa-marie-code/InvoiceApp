@@ -6,7 +6,13 @@ const moon_mode = document.getElementById("#moon");
 const plusButton = document.getElementById('#newButton');
 const overlayField = document.getElementById('popup');
 const itemButton = document.getElementById('#addNew');
-const clearInput = document.getElementsByClassName('.input_group');
+const newItem = document.getElementById('#boxItem');
+
+//form validation
+
+
+
+
 
 
 //darkmode
@@ -18,10 +24,46 @@ function toggleTheme() {
  const openNew = () => {
  overlayField.style.display = 'block';
 };
+
 //New list
-function addList(){
-  itemButton.innerHTML = 'new';
+  function addList(){
+    console.log('It works');
+    let newInput = document.createElement('div');
+    newInput.className = 'newInput';
+    newInput.innerHTML = generateIt();
+    document.getElementById('boxItem').appendChild(newInput);
+   }
+
+ function generateIt(){
+   return `
+   
+   <div class="list">
+   <input type="text" id="client" name="item" class="input_group"/>
+  
+  </div>
+  <div class="list">
+   <input type="text" id="client" name="quantity" class="input_group"/>
+  
+  </div>
+  <div class="list">
+   <input type="text" id="client" name="price" class="input_group"/>
+   
+  </div>
+  <div class="list">
+   <input type="text" id="client" name="total" class="input_group"/>
+   
+  </div>
+  <div class="list">
+   <img src="/starter-code/icon-delete.svg" alt="" onclick="removeItem(this)">
+  </div>
+   `
+ }
+//delete item
+function removeItem(){
+  document.getElementById('boxItem').removeChild();
 }
+
+
 
 //filtering bar
 var expanded = false;
@@ -43,10 +85,33 @@ function clearMyFields(){
   for(var i= 0, c=clearInput.length; i<c; i++){
    clearInput[i].value = "";
   }
-  console.log('Lee');
 }
 
 
+//saving as draft
+function makeDraft(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // parse stored JSON if it exists otherwise an empty object 
+    var values = JSON.parse(localStorage.getItem('input_group') || '{}');
+  
+    var inputs = document.getElementsByClassName('input_group');
+  
+  
+    for (let i = 0; i < inputs.length; i++) {
+      var x = inputs[i];
+      x.value = values[i] || '';// stored value if it exists or empty string
+  
+      x.onchange = function() {
+        // assign value to the object above
+        values[i] = this.value;
+        // store updated version of object
+        localStorage.setItem('inputs', JSON.stringify(values));
+      }
+    }
+  
+  });
+  console.log('Jesus');
+}
 
 
 // json
