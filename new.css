@@ -172,7 +172,7 @@ input {
   padding: 20px;
 
 }
-.buttons input{
+.buttons input,button{
   padding: 10px;
   border: none;
   border-radius: 20px;
@@ -190,8 +190,12 @@ color: var(--lightblue);
   background-color: var(--mainblue);
   color: var(--select-background);
 }
-.list5 img:hover{
+.list img{
+  margin: 12px;
+}
+.list img:hover{
 cursor: pointer;
+
 }
 /* list */
 .newInput{

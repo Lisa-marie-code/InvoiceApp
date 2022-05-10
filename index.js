@@ -7,7 +7,7 @@ const plusButton = document.getElementById('#newButton');
 const overlayField = document.getElementById('popup');
 const itemButton = document.getElementById('#addNew');
 const newItem = document.getElementById('#boxItem');
-
+const bin = document.getElementById('#delete');
 //form validation
 
 
@@ -30,6 +30,7 @@ function toggleTheme() {
     console.log('It works');
     let newInput = document.createElement('div');
     newInput.className = 'newInput';
+    newInput.id = 'newlyInput';
     newInput.innerHTML = generateIt();
     document.getElementById('boxItem').appendChild(newInput);
    }
@@ -54,13 +55,15 @@ function toggleTheme() {
    
   </div>
   <div class="list">
-   <img src="/starter-code/icon-delete.svg" alt="" onclick="removeItem(this)">
+   <img src="/starter-code/icon-delete.svg" id ="delete" alt="" onclick="removeItem(this)">
   </div>
    `
  }
 //delete item
 function removeItem(){
-  document.getElementById('boxItem').removeChild();
+  // document.getElementById('delete').remove();
+  document.getElementById('newlyInput').remove();
+
 }
 
 
