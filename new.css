@@ -93,7 +93,7 @@
   
 }
 .invoice h3{
-  margin-top: 80px;
+  margin-top: 20px;
 }
 .project{
   margin-top: 20px;
@@ -101,10 +101,9 @@
 .item{
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
-  margin-top: 30px;
+  margin-top: 10px;
 }
-.invoice .list1{
-  /* display: block;/ */
+/* .invoice .list1{
   width: 80%;
 }
 .invoice .list2{
@@ -115,7 +114,7 @@
 }
 .invoice .list4{
   width: 70%;
-}
+} */
 /* buttons */
 #addNew{
 padding: 10px;
@@ -150,6 +149,7 @@ text-align: center;
 }
 input {
   border: 1px solid #dfe3fa;
+  padding: 0 10px;
 }
 .City,
 .PostCode,
@@ -170,18 +170,19 @@ input {
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 50px;
   padding: 20px;
+
 }
-.buttons button{
+.buttons input,button{
   padding: 10px;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
-
 #discard{
 background-color: var(--lightblue);
 color: var(--mainblue);
 }
-#save{
+#draft{
 background-color: var(--darkerblue);
 color: var(--lightblue);
 }
@@ -189,6 +190,27 @@ color: var(--lightblue);
   background-color: var(--mainblue);
   color: var(--select-background);
 }
+.list img{
+  margin: 12px;
+}
+.list img:hover{
+cursor: pointer;
+
+}
+/* list */
+.newInput{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr 1.5fr 1fr;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* error */
+.hold_form p{
+ visibility: hidden;
+ color: red;
+}
+
 /* @media only screen and (min-width: 481px) and (max-width: 768px) {
 
 } */

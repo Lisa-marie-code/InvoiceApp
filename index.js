@@ -6,25 +6,67 @@ const moon_mode = document.getElementById("#moon");
 const plusButton = document.getElementById('#newButton');
 const overlayField = document.getElementById('popup');
 const itemButton = document.getElementById('#addNew');
+const newItem = document.getElementById('#boxItem');
+const bin = document.getElementById('#delete');
+//form validation
 
 
 
 
+
+
+//darkmode
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
 
+//overlay
  const openNew = () => {
  overlayField.style.display = 'block';
 };
 
-function added(){
-  itemButton.style.backgroundColor = 'red';
+//New list
+  function addList(){
+    console.log('It works');
+    let newInput = document.createElement('div');
+    newInput.className = 'newInput';
+    newInput.id = 'newlyInput';
+    newInput.innerHTML = generateIt();
+    document.getElementById('boxItem').appendChild(newInput);
+   }
+
+ function generateIt(){
+   return `
+   
+   <div class="list">
+   <input type="text" id="client" name="item" class="input_group"/>
+  
+  </div>
+  <div class="list">
+   <input type="text" id="client" name="quantity" class="input_group"/>
+  
+  </div>
+  <div class="list">
+   <input type="text" id="client" name="price" class="input_group"/>
+   
+  </div>
+  <div class="list">
+   <input type="text" id="client" name="total" class="input_group"/>
+   
+  </div>
+  <div class="list">
+   <img src="/starter-code/icon-delete.svg" id ="delete" alt="" onclick="removeItem(this)">
+  </div>
+   `
+ }
+//delete item
+function removeItem(){
+  // document.getElementById('delete').remove();
+  document.getElementById('newlyInput').remove();
+
 }
 
-// const added = () => {
-// itemButton.style.backgroundColor = 'red';
-// }
+
 
 //filtering bar
 var expanded = false;
@@ -39,6 +81,41 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+
+//discarding inputFields
+function clearMyFields(){
+  var clearInput = document.getElementsByClassName("input_group");
+  for(var i= 0, c=clearInput.length; i<c; i++){
+   clearInput[i].value = "";
+  }
+}
+
+
+//saving as draft
+function makeDraft(){
+  document.addEventListener('DOMContentLoaded', function() {
+    // parse stored JSON if it exists otherwise an empty object 
+    var values = JSON.parse(localStorage.getItem('input_group') || '{}');
+  
+    var inputs = document.getElementsByClassName('input_group');
+  
+  
+    for (let i = 0; i < inputs.length; i++) {
+      var x = inputs[i];
+      x.value = values[i] || '';// stored value if it exists or empty string
+  
+      x.onchange = function() {
+        // assign value to the object above
+        values[i] = this.value;
+        // store updated version of object
+        localStorage.setItem('inputs', JSON.stringify(values));
+      }
+    }
+  
+  });
+  console.log('Jesus');
+}
+
 
 // json
 let main_container = document.createElement('div');
