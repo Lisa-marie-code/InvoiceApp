@@ -172,7 +172,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
 .idenNum,
 .dueDate,
 .amt,
-.client,
+.clientname,
 .arrowImage {
   display: inline;
   margin: 30px auto 30px auto;
@@ -247,7 +247,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     color: var(--text-color);
   }
 
-  .client {
+  .clientname {
     position: relative;
     top: 5px;
     left: 5px;
@@ -304,6 +304,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   #color_mode {
     border-right: 1px solid #6b6565;
     border-bottom: none;
+    cursor: pointer;
   }
   /* newbar filter styling */
   .new_bar {
@@ -351,7 +352,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .idenNum,
   .dueDate,
   .amt,
-  .client {
+  .clientname {
     display: inline;
     margin: 30px auto 0 auto;
     color: var(--text-color);
