@@ -8,6 +8,7 @@ const overlayField = document.getElementById('popup');
 const itemButton = document.getElementById('#addNew');
 const newItem = document.getElementById('#boxItem');
 const bin = document.getElementById('#delete');
+const backInvoice = document.getElementById('#back');
 
 
 
@@ -20,6 +21,11 @@ function toggleTheme() {
  const openNew = () => {
  overlayField.style.display = 'block';
 };
+
+//back from invoice
+const goBack = () =>{
+  overlayField.style.display = 'none';
+}
 
 //New list
   function addList(){
@@ -146,7 +152,7 @@ $(document).ready(function(){
          invoiceCard.appendChild(amount);
 
          let nameStatus = document.createElement('div');
-         nameStatus.className = 'client';
+         nameStatus.className = 'clientname';
          nameStatus.innerText = value.clientName;
          invoiceCard.appendChild(nameStatus);
 

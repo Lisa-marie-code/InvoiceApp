@@ -25,7 +25,7 @@
 }
 
 .new_main h2{
-  margin: 40px 0 0 28px;
+  margin: 20px 0 0 28px;
 }
 .new_main h5{
   line-height: 30px;
@@ -35,6 +35,12 @@
 .new_Header {
   margin: 20px auto 0 60px;
 }
+#back{
+ cursor: pointer;
+ margin: 20px 0 0 28px;
+}
+
+
 /* form */
 .hold_form {
   width: 90%;
