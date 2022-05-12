@@ -8,10 +8,6 @@ const overlayField = document.getElementById('popup');
 const itemButton = document.getElementById('#addNew');
 const newItem = document.getElementById('#boxItem');
 const bin = document.getElementById('#delete');
-//form validation
-
-
-
 
 
 

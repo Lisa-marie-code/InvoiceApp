@@ -2,8 +2,6 @@
 
 .overlay {
   width: 94%;
-  /* height: 100%; */
-  /* height: 1299px; */
   margin: auto;
   position: fixed;
   display: none;
@@ -13,8 +11,6 @@
   bottom: 0;
   background-color: var(--overlayColor);
   z-index: 2;
-  overflow: auto;
-  max-height: 100vh;
 }
 .new_main {
   position: absolute;
@@ -24,6 +20,8 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: var(--select-background);
+  overflow: auto;
+  max-height: 100vh;
 }
 
 .new_main h2{
@@ -93,7 +91,7 @@
   
 }
 .invoice h3{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .project{
   margin-top: 20px;
@@ -101,25 +99,13 @@
 .item{
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
-  margin-top: 10px;
 }
-/* .invoice .list1{
-  width: 80%;
-}
-.invoice .list2{
-  width: 80%;
-}
-.invoice .list3{
-  width: 80%;
-}
-.invoice .list4{
-  width: 70%;
-} */
+
 /* buttons */
 #addNew{
 padding: 10px;
 width: 100%;
-margin: 20px auto 0 0;
+margin: 0 auto 0 0;
 border-radius: 20px;
 border: none;
 background-color: var(--lightblue);
@@ -130,12 +116,12 @@ text-align: center;
 #city,#postcode,#country,
 #city1,#postcode1,#country1{
   height: 40px;
-  width: 150px;
-  margin: 3px;
+  width: 140px;
+  margin: 5px;
 }
 #invoiceDate,#netdays{
   height: 40px;
-  width: 220px;
+  width: 210px;
   margin: 7px;
 }
 #street,#client,
