@@ -15,11 +15,3 @@ if(client.value.trim() === ''){
   }
 
 });
-
-    // function error(element,msg){
-    //     element.style.border = '3px solid red';
-    //     const parent = element.parentElement;
-    //     const p = parent.querySelector('p');
-    //     p.textContent = msg;
-    //     p.style.visibility = 'visible';
-    // }
