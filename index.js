@@ -61,10 +61,10 @@ const goBack = () =>{
   </div>
    `
  }
+
 //delete item
 function removeItem(){
-  // document.getElementById('delete').remove();
-  document.getElementById('newlyInput').remove();
+  document.getElementById('newlyInput').remove(this);
 
 }
 
@@ -99,7 +99,7 @@ function makeDraft(){
     // parse stored JSON if it exists otherwise an empty object 
     var values = JSON.parse(localStorage.getItem('input_group') || '{}');
   
-    var inputs = document.getElementsByClassName('input_group');
+    var inputs = document.querySelectorAll('input_group');
   
   
     for (let i = 0; i < inputs.length; i++) {
@@ -116,6 +116,39 @@ function makeDraft(){
   
   });
   console.log('Jesus');
+}
+
+
+function makeDraft(){
+  let street = document.getElementById('street').value;
+  let city = document.getElementById('city').value;
+  let postcode = document.getElementById('postcode').value;
+  let country = document.getElementById('country').value;
+  let client = document.getElementById('client').value;
+  let email = document.getElementById('email').value;
+  let streetOne = document.getElementById('street1').value;
+  let postcodeOne = document.getElementById('postcode1').value;
+  let countryOne = document.getElementById('country1').value;
+  let calendar = document.getElementById('invoiceDate').value;
+  let days = document.getElementById('netdays').value;
+  let project = document.getElementById('project').value;
+
+  const allInputs ={
+    street: street,
+    city: city,
+    postcode: postcode,
+    country:country,
+    client:client,
+    email:email,
+    streetOne:streetOne,
+    postcodeOne:postcodeOne,
+    countryOne:countryOne,
+    calendar:calendar,
+    days:days,
+    project:project,
+
+  }
+  localStorage.setItem('allInputs',JSON.stringify(allInputs));
 }
 
 

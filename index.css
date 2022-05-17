@@ -294,8 +294,8 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .header div * {
     margin: 20px auto 0 20px;
   }
+  
   #logo {
-    background-color: var(--midblue);
     height: 72px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
@@ -327,7 +327,12 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .create_new p span {
     display: none;
   }
-  
+  .create_new img{
+    padding: 10px;
+  }
+  .create_new p{
+    padding: 5px;
+  }
 }
 
 /* tablet view */
@@ -375,13 +380,11 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     grid-template-columns: 1fr 3fr 1fr 1fr;
   }
   .header div * {
-    margin: 30px auto 0 50px;
+    margin: 30px auto 0 30px;
   }
   #logo {
-    background-color: var(--midblue);
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
-
     height: 80px;
   }
   .user img {
