@@ -13,6 +13,7 @@ body {
   --checkbox-background: #fff;
   --cardBG: #fff;
   --overlayColor:rgba(0, 0, 0, 0.5);
+  --formBG:#fff;
 }
 
 .dark {
@@ -42,6 +43,7 @@ body {
   --status: #33d69f;
   --statBG: #e4f7f0;
   --cardBG: #fff;
+  --paymentBG: #fff;
 }
 
 /* Desktop view */
@@ -195,7 +197,9 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   position: absolute;
   
 }
-
+#netdays option{
+  background-color: var(--paymentBG);
+}
 
 /* mobile view */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
