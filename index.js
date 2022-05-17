@@ -57,14 +57,14 @@ const goBack = () =>{
    
   </div>
   <div class="list">
-   <img src="/starter-code/icon-delete.svg" id ="delete" alt="" onclick="removeItem(this)">
+   <img src="/starter-code/icon-delete.svg" id ="delete" alt="" onclick="removeItem()">
   </div>
    `
  }
 
 //delete item
 function removeItem(){
-  document.getElementById('newlyInput').remove(this);
+  document.getElementById('newlyInput').remove();
 
 }
 
@@ -94,29 +94,30 @@ function clearMyFields(){
 
 
 //saving as draft
-function makeDraft(){
-  document.addEventListener('DOMContentLoaded', function() {
-    // parse stored JSON if it exists otherwise an empty object 
-    var values = JSON.parse(localStorage.getItem('input_group') || '{}');
+// function makeDraft(){
+//   document.addEventListener('DOMContentLoaded', function() {
+//     // parse stored JSON if it exists otherwise an empty object 
+//     var values = JSON.parse(localStorage.getItem('input_group') || '{}');
   
-    var inputs = document.querySelectorAll('input_group');
+//     var inputs = document.querySelectorAll('input_group');
   
   
-    for (let i = 0; i < inputs.length; i++) {
-      var x = inputs[i];
-      x.value = values[i] || '';// stored value if it exists or empty string
+//     for (let i = 0; i < inputs.length; i++) {
+//       var x = inputs[i];
+//       x.value = values[i] || '';// stored value if it exists or empty string
   
-      x.onchange = function() {
-        // assign value to the object above
-        values[i] = this.value;
-        // store updated version of object
-        localStorage.setItem('inputs', JSON.stringify(values));
-      }
-    }
+//       x.onchange = function() {
+//         // assign value to the object above
+//         values[i] = this.value;
+//         // store updated version of object
+//         localStorage.setItem('inputs', JSON.stringify(values));
+//       }
+//     }
   
-  });
-  console.log('Jesus');
-}
+//   });
+//   console.log('Jesus');
+// }
+
 
 
 function makeDraft(){

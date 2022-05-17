@@ -1,12 +1,14 @@
- @import "index.css";
+@import "index.css";
+
+
 
 .overlay {
-  width: 94%;
+  width: 86.2%;
+  /* width: 100%; */
   margin: auto;
   position: fixed;
-  display: none;
   top: 0;
-  left: 103px;
+  left: 0;
   right: 0;
   bottom: 0;
   background-color: var(--overlayColor);
@@ -19,15 +21,15 @@
   top: 0px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: var(--select-background);
+  background-color: var(--formBG);
   overflow: auto;
   max-height: 100vh;
 }
 
-.new_main h2{
+.new_main h2 {
   margin: 20px 0 0 28px;
 }
-.new_main h5{
+.new_main h5 {
   line-height: 30px;
   color: var(--mainblue);
   margin: 20px 0 0 10px;
@@ -35,11 +37,10 @@
 .new_Header {
   margin: 20px auto 0 60px;
 }
-#back{
- cursor: pointer;
- margin: 20px 0 0 28px;
+#back {
+  cursor: pointer;
+  margin: 20px 0 0 28px;
 }
-
 
 /* form */
 .hold_form {
@@ -57,81 +58,93 @@
   height: 40px;
 }
 
-.cities div label{
+.cities div label {
   display: block;
 }
-.cities .firstCity,.firstCode,
-.firstCoun{
+.cities .firstCity,
+.firstCode,
+.firstCoun {
   display: inline-block;
 }
-.cities1 .secondCity,.secondCode,
-.secondCoun{
+.cities1 .secondCity,
+.secondCode,
+.secondCoun {
   display: inline-block;
 }
-.cities1 div label{
+.cities1 div label {
   display: block;
 }
-.cities,.cities1{
+.cities,
+.cities1 {
   margin-top: 30px;
 }
-.client,.email,.street{
+.client,
+.email,
+.street {
   margin-top: 20px;
 }
 
 /* invoice input */
-.invoice{
+.invoice {
   margin-top: 40px;
 }
-.invoice select{
+.invoice select {
   background-color: #fff;
   border: 1px solid #dfe3fa;
 }
-.invoice select option{
+.invoice select option {
   background-color: var(--checkbox-background);
 }
-.invoice div label{
+.invoice div label {
   display: block;
 }
-.invoice .calendar, .netdays{
+.invoice .calendar,
+.netdays {
   display: inline-block;
-  
 }
-.invoice h3{
+.invoice h3 {
   margin-top: 10px;
 }
-.project{
+.project {
   margin-top: 20px;
 }
-.item{
+.item {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
 }
 
 /* buttons */
-#addNew{
-padding: 10px;
-width: 100%;
-margin: 0 auto 0 0;
-border-radius: 20px;
-border: none;
-background-color: var(--lightblue);
-cursor: pointer;
-text-align: center;
-
+#addNew {
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto 0 0;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--lightblue);
+  cursor: pointer;
+  text-align: center;
 }
-#city,#postcode,#country,
-#city1,#postcode1,#country1{
+#city,
+#postcode,
+#country,
+#city1,
+#postcode1,
+#country1 {
   height: 40px;
   width: 140px;
   margin: 5px;
 }
-#invoiceDate,#netdays{
+#invoiceDate,
+#netdays {
   height: 40px;
   width: 210px;
   margin: 7px;
 }
-#street,#client,
-#email,#street1,#project{
+#street,
+#client,
+#email,
+#street1,
+#project {
   width: 100%;
   height: 40px;
 }
@@ -156,41 +169,40 @@ input {
   width: 100px;
   height: 40px;
   margin-left: 35px;
-} 
-.buttons{
+}
+.buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   padding: 20px;
-
 }
-.buttons input,button{
+.buttons input,
+button {
   padding: 10px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
 }
-#discard{
-background-color: var(--lightblue);
-color: var(--mainblue);
+#discard {
+  background-color: var(--lightblue);
+  color: var(--mainblue);
 }
-#draft{
-background-color: var(--darkerblue);
-color: var(--lightblue);
+#draft {
+  background-color: var(--darkerblue);
+  color: var(--lightblue);
 }
-#send{
+#send {
   background-color: var(--mainblue);
   color: var(--select-background);
 }
-.list img{
+.list img {
   margin: 12px;
 }
-.list img:hover{
-cursor: pointer;
-
+.list img:hover {
+  cursor: pointer;
 }
 /* list */
-.newInput{
+.newInput {
   display: grid;
   grid-template-columns: 1.5fr 1fr 2fr 1.5fr 1fr;
   gap: 10px;
@@ -198,11 +210,30 @@ cursor: pointer;
 }
 
 /* error */
-.hold_form p{
- visibility: hidden;
- color: red;
+.hold_form p {
+  visibility: hidden;
+  color: red;
 }
 
-/* @media only screen and (min-width: 481px) and (max-width: 768px) {
-
-} */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  div#popup.overlay {
+    width: 100%;
+    position: fixed;
+    display: none;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlayColor);
+    z-index: 2;
+  }
+  .new_main {
+    position: absolute;
+    width: 616px;
+    /* height: 1424px; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--select-background);
+    overflow: auto;
+    max-height: 100vh;
+  }
+}
