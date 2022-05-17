@@ -1,54 +1,64 @@
-
 const body = document.querySelector("body");
 const colorTheme = document.getElementById("#color_mode");
 const moon_mode = document.getElementById("#moon");
+const plusButton = document.getElementById('#newButton');
+const overlayField = document.getElementById('popup');
+const itemButton = document.getElementById('#addNew');
+const barDiv = document.querySelector('new_bar');
+
 
 
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
 
+const openNew = () => {
+  overlayField.style.display = 'block';
+};
 
-//filtering bar
-var expanded = false;
-
-function showCheckboxes() {
-  var checkboxes = document.getElementById("checkboxes");
-  if (!expanded) {
-    checkboxes.style.display = "block";
-    expanded = true;
-  } else {
-    checkboxes.style.display = "none";
-    expanded = false;
-  }
+function added() {
+  itemButton.style.backgroundColor = 'red';
 }
+
+// const added = () => {
+// itemButton.style.backgroundColor = 'red';
+// }
+
 
 
 let statusDivContainer = document.createElement('div');
-    statusDivContainer.className = 'st-div';
-    document.body.appendChild(statusDivContainer);
+statusDivContainer.className = 'st-div';
+// statusDivContainer.innerText = 'Status';
+document.body.appendChild(statusDivContainer);
 
 
-  $(document).ready(function(){
-    $.getJSON("data.json", function(data){
-        $.each(data, function(index, value){ 
-            console.log(value);
 
-             let statusDiv = document.createElement('div');
-                statusDiv.className = 'status-div';
-                statusDivContainer.appendChild(statusDiv);
 
-            
-        //     let invoiceCard = document.createElement('div');
-        //     invoiceCard.className = 'card';
-        //     invoiceCard.id = 'tickect';
-        //     // document.body.appendChild(invoiceCard);
-        //     main_container.appendChild(invoiceCard);
-      
-        });
-  
-  
-        });
+let statusDiv = document.createElement('div');
+statusDiv.className = 'status-div';
+statusDiv.style.backgroundColor = 'white';
+
+document.body.appendChild(statusDiv);
+
+
+$(document).ready(function () {
+  $.getJSON("data.json", function (data) {
+    $.each(data, function (index, value) {
+      console.log(value);
+
+     
+
+
+
+
+
     });
-  
-//   export { statusDivContainer};
+
+    
+    
+  });
+});
+
+export {
+  statusDivContainer, statusDiv
+};

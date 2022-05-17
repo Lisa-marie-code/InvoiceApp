@@ -5,20 +5,23 @@
 }
 body {
   --text-color: #000;
-  --select-background:#fff;
+  --select-background: #fff;
   font-family: "League Spartan", sans-serif;
   background-color: var(--background);
-  --filter-background:var(--filter);
-  --label-text:#000;
-  --checkbox-background:#fff;
+  --filter-background: var(--filter);
+  --label-text: #000;
+  --checkbox-background: #fff;
+  --cardBG: #fff;
+  --overlayColor:rgba(0, 0, 0, 0.5);
 }
 
 .dark {
-  background-color: var(--darkblue);
+  background-color: var(--darkBG);
   --text-color: #fff;
-  --filter-background:#252945;
-  --label-text:#fff;
-  --checkbox-background:var(--middark);
+  --filter-background: #252945;
+  --label-text: #fff;
+  --checkbox-background: var(--middark);
+  --cardBG: var(--darkblue);
 }
 
 :root {
@@ -35,109 +38,249 @@ body {
   --lightBG: #f8f8fb;
   --darkBG: #141625;
   --background: #f2f2f2;
-  --filter:#f2f2f2;
+  --filter: #f2f2f2;
+  --status: #33d69f;
+  --statBG: #e4f7f0;
+  --cardBG: #fff;
+}
+
+/* Desktop view */
+.header {
+  width: 103px;
+  height: 1000px;
+  top: 0px;
+  left: 0px;
+  background-color: var(--middark);
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr 1fr;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.user img {
+  border-radius: 50%;
+  width: 40%;
+}
+.header div * {
+  margin: 40px auto 0 30px;
+}
+.card:hover{
+  border: 2px solid var(--mainblue);
+  cursor: pointer;
+}
+#logo {
+  background-color: var(--midblue);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100px;
+ 
+}
+#color_mode {
+  border-bottom: 1px solid #6b6565;
+  cursor: pointer;
+}
+.new_bar {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  position: absolute;
+  width: 730px;
+  height: 59px;
+  left: 355px;
+  top: 72px;
+  padding: 10px;
+}
+select {
+  border: 0px;
+  outline: 0px;
+  font-weight: 600;
+  background-color: var(--filter);
+}
+#invoiceNum {
+  color: var(--grayblue);
+  line-height: 20px;
+}
+.invoices p span {
+  display: inline-block;
+}
+.selectBox {
+  position: relative;
+}
+
+.selectBox select option span {
+  display: none;
+}
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+#checkboxes {
+  display: none;
+  background-color: var(--checkbox-background);
+  width: 192px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: #979797 0px 4px 12px;
+}
+#checkboxes label {
+  display: block;
+  padding: 10px;
+  color: var(--label-text);
+}
+.create_new label {
+  display: flex;
+  background-color: var(--mainblue);
+  width: 140px;
+  height: 38px;
+  border-radius: 80px;
+  align-items: center;
+  padding: 5px;
+}
+.create_new label:hover {
+  background-color: var(--midblue);
+  cursor: pointer;
+}
+.create_new img {
+  background-color: var(--lightBG);
+  border-radius: 50px;
+  padding: 10px;
+}
+.create_new p {
+  color: var(--lightBG);
+  font-weight: 600;
+  padding: 10px;
+}
+/* Invoice */
+.card{
+position: relative;
+width: 730px;
+margin: 30px auto 0 360px;
+background-color: var(--cardBG);
+border-radius: 8px;
+display: grid;
+grid-template-columns: 1fr 2fr 1fr 2fr 1fr .5fr;
+box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+}
+
+.mcontainer{
+  margin-top: 180px;
+    position: relative;
+}
+
+.idenNum,
+.dueDate,
+.amt,
+.client,
+.arrowImage {
+  display: inline;
+  margin: 30px auto 30px auto;
+  color: var(--text-color);
+}
+.payment {
+  margin-top: 15px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.roundStatus{
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #000;
+  display: grid;
+  position: absolute;
+  
 }
 
 
 /* mobile view */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .card{
+  .card {
     margin: 20px auto 0 auto;
     width: 320px;
     height: 130px;
     border-radius: 5px;
-    background-color: #ffffff;
-     position: relative; 
+    background-color: var(--cardBG);
   }
-  .mcontainer{
+  .mcontainer {
     margin-top: 120px;
     position: relative;
   }
-  .idenNum{
-   
+.arrowImage{
+  display: none;
+}
+  .idenNum {
     position: relative;
     top: 5px;
-    left: 24px; 
-    display: inline-block; 
-    font-family: 'Spartan';
-    font-style: normal;
+    left: 24px;
+    display: inline-block;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
-    color: #0C0E16;
-  
+    color: var(--text-color);
   }
-  .dueDate{
-   
+  .dueDate {
     position: relative;
     top: 40px;
-    left: -15px; 
-    display: inline-block; 
-    font-family: 'Spartan';
-    font-style: normal;
+    left: -40px;
+    display: inline-block;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
-    color: #7E88C3;
     letter-spacing: -0.25px;
+    color: var(--midblue);
   }
-  
-  .amt{
+  .amt {
     position: relative;
     top: 70px;
-    left: -70px;
-    display: inline-block;  
-    font-family: 'Spartan';
-    font-style: normal;
+    left: -110px;
+    display: inline-block;
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
     letter-spacing: -0.8px;
-    color: #0C0E16;
+    color: var(--text-color);
   }
-  
-  .client{
+
+  .client {
     position: relative;
     top: 5px;
-    left: 80px;
-    display: inline-block; 
-    font-family: 'Spartan';
-    font-style: normal;
+    left: 5px;
+    display: inline-block;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     text-align: right;
     letter-spacing: -0.25px;
-    color: #858BB2;
+    color: var(--lightblue);
   }
-  
-  .payment{
+
+  .payment {
     position: absolute;
     top: 50px;
-    left: 180px; 
+    left: 180px;
     width: 104px;
     height: 40px;
     border-radius: 5px;
     border-style: none;
-    border-radius: 5px;
     text-align: center;
-    font-family: 'Spartan';
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
-    background: #e4f7f0;
-    color: #33D69F;
-   
-  
-  } 
+  }
+
   .container {
     /* position: relative; */
     width: 375px;
-    /* height: 1319px; */
   }
+
   /* header styling */
   .header {
     position: relative;
@@ -149,21 +292,19 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
   }
-
-  .user img {
-    border-radius: 50%;
-    width: 40%;
-  }
   .header div * {
     margin: 20px auto 0 20px;
   }
   #logo {
     background-color: var(--midblue);
-    border-radius: 10px;
+    height: 72px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
   }
 
   #color_mode {
     border-right: 1px solid #6b6565;
+    border-bottom: none;
   }
   /* newbar filter styling */
   .new_bar {
@@ -174,84 +315,54 @@ body {
     height: 52px;
     left: 24px;
     top: 104px;
-    border: 1px solid #000;
     color: var(--text-color);
     padding: 10px;
   }
-  select{
-    border: 0px;
-    outline: 0px;
-    font-weight: 600;
-    background-color: var(--filter);
-}
-  #invoiceNum {
-    color: var(--grayblue);
-    line-height: 20px;
-  }
-  .invoices p span{
-      display: none;
-  }
-  .selectBox {
-    position: relative;
-  }
-  
-  .selectBox select option span {
-    display: none;
-  }
-  .overSelect {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  #checkboxes {
-    display: none;
-    background-color: var(--checkbox-background);
-    width: 192px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: #979797 0px 4px 12px;
-   
-  }
-  #checkboxes label {
-    display: block;
-    padding: 10px;
-    color:var(--label-text);
-  }
-  
   .create_new label {
-    display: flex;
-    background-color: var(--mainblue);
     width: 80px;
     height: 35px;
-    border-radius: 80px;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 5px;
   }
-  .create_new label:hover{
-   background-color: var(--midblue);
+  .create_new p span {
+    display: none;
   }
-  .create_new img {
-    background-color: var(--lightBG);
-    border-radius: 50px;
-    padding: 10px;
-  }
-  .create_new p {
-    color: var(--lightBG);
-    font-weight: 600;
-  }
-   .create_new p span{
-      display:none ;
-  } 
+  
 }
 
 /* tablet view */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .container {
-    position: relative;
     width: 768px;
-    height: 1024px;
+  }
+
+  .mcontainer {
+    margin-top: 240px;
+    position: relative;
+  }
+  .card {
+    width: 672px;
+    height: 72px;
+    background-color: var(--cardBG);
+    border-radius: 8px;
+    margin: 20px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr .5fr;
+  }
+  .idenNum,
+  .dueDate,
+  .amt,
+  .client {
+    display: inline;
+    margin: 30px auto 0 auto;
+    color: var(--text-color);
+  }
+  .payment {
+    margin-top: 15px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
   }
   .header {
     position: absolute;
@@ -268,11 +379,18 @@ body {
   }
   #logo {
     background-color: var(--midblue);
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+
+    height: 80px;
   }
   .user img {
     border-radius: 50%;
     width: 25%;
+  }
+  #color_mode {
+    border-right: 1px solid #6b6565;
+    border-bottom: none;
   }
   .new_bar {
     display: grid;
@@ -282,7 +400,6 @@ body {
     height: 59px;
     left: 48px;
     top: 136px;
-    border: 1px solid #000;
     color: var(--text-color);
     padding: 10px;
   }
@@ -290,45 +407,13 @@ body {
     color: var(--grayblue);
     line-height: 30px;
   }
-  select{
-      border: 0px;
-      outline: 0px;
-      font-weight: 600;
-      background-color: var(--filter);
-  }
-  .selectBox {
-    position: relative;
-  }
-  
-  .overSelect {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  #checkboxes {
-    display: none;
-    background-color: var(--checkbox-background);
-    width: 192px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: #979797 0px 4px 12px;
-  }
-  #checkboxes label {
-    display: block;
-    padding: 10px;
-    color:var(--label-text);
-  }
   .create_new label {
     display: flex;
     background-color: var(--mainblue);
-    width: 120px;
-    height: 35px;
+    width: 140px;
+    height: 38px;
     border-radius: 80px;
     align-items: center;
-    justify-content: space-around;
-   
   }
   .create_new img {
     background-color: var(--lightBG);
@@ -339,6 +424,4 @@ body {
     color: var(--lightBG);
     font-weight: 600;
   }
-  
 }
-

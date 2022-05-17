@@ -8,6 +8,8 @@
     "clientName": "Jensen Huang",
     "clientEmail": "jensenh@mail.com",
     "status": "paid",
+    "hex":"#33D69F",
+    "hexBG" :"#F3FDF9",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",
@@ -39,6 +41,8 @@
     "clientName": "Alex Grim",
     "clientEmail": "alexgrim@mail.com",
     "status": "pending",
+    "hex":"#FF8F00",
+    "hexBG" : "#FFF4E7",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",
@@ -76,6 +80,8 @@
     "clientName": "John Morrison",
     "clientEmail": "jm@myco.com",
     "status": "paid",
+    "hex":"#33D69F",
+    "hexBG" :"#F3FDF9",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",
@@ -107,6 +113,8 @@
     "clientName": "Alysa Werner",
     "clientEmail": "alysa@email.co.uk",
     "status": "pending",
+    "hex":"#FF8F00",
+    "hexBG" : "#FFF4E7",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",
@@ -138,6 +146,8 @@
     "clientName": "Mellisa Clarke",
     "clientEmail": "mellisa.clarke@example.com",
     "status": "pending",
+    "hex":"#FF8F00",
+    "hexBG" : "#FFF4E7",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",
@@ -175,6 +185,8 @@
     "clientName": "Thomas Wayne",
     "clientEmail": "thomas@dc.com",
     "status": "pending",
+    "hex":"#FF8F00",
+    "hexBG" : "#FFF4E7",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",
@@ -206,6 +218,7 @@
     "clientName": "Anita Wainwright",
     "clientEmail": "",
     "status": "draft",
+    "hexBG" : "#E4E4E4",
     "senderAddress": {
       "street": "19 Union Terrace",
       "city": "London",

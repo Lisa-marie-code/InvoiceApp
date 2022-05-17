@@ -1,0 +1,43 @@
+/* @import "index.css"; */
+
+.st-div{
+    position: relative;
+    margin: 50px auto 0 auto;
+    width: 327px;
+    background-color: white;
+    height: 91px;
+    border-radius: 5px;
+    
+    align-content: center;
+    visibility: hidden;
+}
+
+.statuses{
+    
+        position: relative;
+        top: 20px;
+        left: 180px;
+        width: 104px;
+        height: 40px;
+        border-radius: 5px;
+        border-style: none;
+        text-align: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.25px;
+      }
+    
+
+.status-div{
+    margin: 15px auto 0 auto;
+    border-radius: 5px;
+    width: 327px;
+    background-color: white;
+  visibility: hidden;
+}
+
+/* .new_bar{
+    visibility: hidden;
+} */

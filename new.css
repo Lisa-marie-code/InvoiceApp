@@ -1,0 +1,216 @@
+@import "index.css";
+
+.overlay {
+  width: 94%;
+  /* height: 100%; */
+  /* height: 1299px; */
+  margin: auto;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 103px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlayColor);
+  z-index: 2;
+  overflow: auto;
+  max-height: 100vh;
+}
+.new_main {
+  position: absolute;
+  width: 560px;
+  height: 1299px;
+  top: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--select-background);
+}
+
+.new_main h2{
+  margin: 40px 0 0 28px;
+}
+.new_main h5{
+  line-height: 30px;
+  color: var(--mainblue);
+  margin: 20px 0 0 10px;
+}
+.new_Header {
+  margin: 20px auto 0 60px;
+}
+/* form */
+.hold_form {
+  width: 90%;
+  height: 95%;
+  margin: 10px auto 0 auto;
+  padding: 10px;
+}
+
+/* input */
+.StreetAddress,
+.CName,
+.cemail {
+  width: 90%;
+  height: 40px;
+}
+
+.cities div label{
+  display: block;
+}
+.cities .firstCity,.firstCode,
+.firstCoun{
+  display: inline-block;
+}
+.cities1 .secondCity,.secondCode,
+.secondCoun{
+  display: inline-block;
+}
+.cities1 div label{
+  display: block;
+}
+.cities,.cities1{
+  margin-top: 30px;
+}
+.client,.email,.street{
+  margin-top: 20px;
+}
+
+/* invoice input */
+.invoice{
+  margin-top: 40px;
+}
+.invoice select{
+  background-color: #fff;
+  border: 1px solid #dfe3fa;
+}
+.invoice select option{
+  background-color: var(--checkbox-background);
+}
+.invoice div label{
+  display: block;
+}
+.invoice .calendar, .netdays{
+  display: inline-block;
+  
+}
+.invoice h3{
+  margin-top: 20px;
+}
+.project{
+  margin-top: 20px;
+}
+.item{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
+  margin-top: 10px;
+}
+/* .invoice .list1{
+  width: 80%;
+}
+.invoice .list2{
+  width: 80%;
+}
+.invoice .list3{
+  width: 80%;
+}
+.invoice .list4{
+  width: 70%;
+} */
+/* buttons */
+#addNew{
+padding: 10px;
+width: 100%;
+margin: 20px auto 0 0;
+border-radius: 20px;
+border: none;
+background-color: var(--lightblue);
+cursor: pointer;
+text-align: center;
+
+}
+#city,#postcode,#country,
+#city1,#postcode1,#country1{
+  height: 40px;
+  width: 150px;
+  margin: 3px;
+}
+#invoiceDate,#netdays{
+  height: 40px;
+  width: 220px;
+  margin: 7px;
+}
+#street,#client,
+#email,#street1,#project{
+  width: 100%;
+  height: 40px;
+}
+
+.newForm {
+  display: grid;
+}
+input {
+  border: 1px solid #dfe3fa;
+  padding: 0 10px;
+}
+.City,
+.PostCode,
+.Country {
+  width: 100px;
+  height: 40px;
+  margin-left: 35px;
+}
+.City_one,
+.PostCode_one,
+.Country_one {
+  width: 100px;
+  height: 40px;
+  margin-left: 35px;
+} 
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 50px;
+  padding: 20px;
+
+}
+.buttons input,button{
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#discard{
+background-color: var(--lightblue);
+color: var(--mainblue);
+}
+#draft{
+background-color: var(--darkerblue);
+color: var(--lightblue);
+}
+#send{
+  background-color: var(--mainblue);
+  color: var(--select-background);
+}
+.list img{
+  margin: 12px;
+}
+.list img:hover{
+cursor: pointer;
+
+}
+/* list */
+.newInput{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr 1.5fr 1fr;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* error */
+.hold_form p{
+ visibility: hidden;
+ color: red;
+}
+
+/* @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+} */
