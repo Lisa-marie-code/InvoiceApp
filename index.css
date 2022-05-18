@@ -208,11 +208,14 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     background-color: var(--cardBG);
   }
   .mcontainer {
-    margin-top: 120px;
+    margin-top: 5px;
     position: relative;
   }
-.arrowImage{
-  display: none;
+.r-arrow{
+  visibility: hidden;
+  position: relative;
+  top: 20px;
+  left: 20px;
 }
   .idenNum {
     position: relative;
