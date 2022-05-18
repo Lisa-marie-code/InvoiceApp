@@ -91,6 +91,64 @@
 
 }
 
+.dtclientemail{
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+}
+
+.dtitemgroup{
+    margin-top: 50px;
+}
+
+.dtitems{
+    background-color: #F9FAFE;
+    padding: 25px;
+}
+#bold-two{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+   
+
+}
+
+.gtotal{
+    background-color: #373B53;
+    color: #FFFFFF;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-family: 'Spartan';
+    font-style: normal;
+    border-radius: 0px 0px 8px 8px
+}
+
+.totalamount{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: -0.416667px;
+}
+
+.grandtotal{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+
+}
 /* .new_bar{
     visibility: hidden;
 } */

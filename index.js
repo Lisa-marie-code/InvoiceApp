@@ -229,6 +229,39 @@ $(document).ready(function(){
       clientEmail.innerText = value.clientEmail;
       statusDiv.appendChild(clientEmail);
 
+      let itemGroup = document.createElement('div');
+      itemGroup.className = 'dtitemgroup';
+      statusDiv.appendChild(itemGroup);
+
+      let items = document.createElement('div');
+      items.className = 'dtitems';
+      itemGroup.appendChild(items);
+
+      let bdesign = document.createElement('div');
+      bdesign.className = 'dtbdesign';
+      bdesign.id = 'bold-two';
+      bdesign.innerText = 'Banner Design';
+      items.appendChild(bdesign);
+
+      let calDesign = document.createElement('div');
+      calDesign.className = 'dtcaldesign';
+      // calDesign.innerText = value.items[3];
+      bdesign.appendChild(calDesign);
+
+      let gTotal = document.createElement('div')
+      gTotal.className = 'gtotal';
+      itemGroup.appendChild(gTotal);
+
+      let grandTotal = document.createElement('div');
+      grandTotal.className = 'grandtotal';
+      grandTotal.innerText = 'Grand Total';
+      gTotal.appendChild(grandTotal);
+
+      let totalAmount = document.createElement('div');
+      totalAmount. className = 'totalamount';
+      totalAmount.innerText =  + value.total;
+      gTotal.appendChild(totalAmount)
+
 
      });
 
