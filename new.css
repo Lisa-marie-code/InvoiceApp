@@ -9,6 +9,14 @@
   display: none;
   top: 0;
   left: 103px;
+}
+.overlay {
+  width: 86.2%;
+  /* width: 100%; */
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   background-color: var(--overlayColor);
@@ -30,12 +38,26 @@
   margin: 40px 0 0 28px;
 }
 .new_main h5{
+  background-color: var(--formBG);
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.new_main h2 {
+  margin: 20px 0 0 28px;
+}
+.new_main h5 {
   line-height: 30px;
   color: var(--mainblue);
   margin: 20px 0 0 10px;
 }
 .new_Header {
   margin: 20px auto 0 60px;
+}
+
+#back {
+  cursor: pointer;
+  margin: 20px 0 0 28px;
 }
 /* form */
 .hold_form {
@@ -52,6 +74,7 @@
   width: 90%;
   height: 40px;
 }
+
 
 .cities div label{
   display: block;
@@ -71,10 +94,34 @@
   margin-top: 30px;
 }
 .client,.email,.street{
+.cities div label {
+  display: block;
+}
+.cities .firstCity,
+.firstCode,
+.firstCoun {
+  display: inline-block;
+}
+.cities1 .secondCity,
+.secondCode,
+.secondCoun {
+  display: inline-block;
+}
+.cities1 div label {
+  display: block;
+}
+.cities,
+.cities1 {
+  margin-top: 30px;
+}
+.client,
+.email,
+.street {
   margin-top: 20px;
 }
 
 /* invoice input */
+
 .invoice{
   margin-top: 40px;
 }
@@ -125,7 +172,6 @@ border: none;
 background-color: var(--lightblue);
 cursor: pointer;
 text-align: center;
-
 }
 #city,#postcode,#country,
 #city1,#postcode1,#country1{
@@ -140,6 +186,66 @@ text-align: center;
 }
 #street,#client,
 #email,#street1,#project{
+.invoice {
+  margin-top: 40px;
+}
+.invoice select {
+  background-color: #fff;
+  border: 1px solid #dfe3fa;
+}
+.invoice select option {
+  background-color: var(--checkbox-background);
+}
+.invoice div label {
+  display: block;
+}
+.invoice .calendar,
+.netdays {
+  display: inline-block;
+}
+.invoice h3 {
+  margin-top: 10px;
+}
+.project {
+  margin-top: 20px;
+}
+.item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
+}
+
+/* buttons */
+#addNew {
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto 0 0;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--lightblue);
+  cursor: pointer;
+  text-align: center;
+}
+#city,
+#postcode,
+#country,
+#city1,
+#postcode1,
+#country1 {
+  height: 40px;
+  width: 140px;
+  margin: 5px;
+}
+#invoiceDate,
+#netdays {
+  height: 40px;
+  width: 210px;
+  margin: 7px;
+}
+#street,
+#client,
+#email,
+#street1,
+#project {
   width: 100%;
   height: 40px;
 }
@@ -173,6 +279,16 @@ input {
 
 }
 .buttons input,button{
+
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 20px;
+}
+.buttons input,
+button {
   padding: 10px;
   border: none;
   border-radius: 20px;
@@ -199,6 +315,26 @@ cursor: pointer;
 }
 /* list */
 .newInput{
+#discard {
+  background-color: var(--lightblue);
+  color: var(--mainblue);
+}
+#draft {
+  background-color: var(--darkerblue);
+  color: var(--lightblue);
+}
+#send {
+  background-color: var(--mainblue);
+  color: var(--select-background);
+}
+.list img {
+  margin: 12px;
+}
+.list img:hover {
+  cursor: pointer;
+}
+/* list */
+.newInput {
   display: grid;
   grid-template-columns: 1.5fr 1fr 2fr 1.5fr 1fr;
   gap: 10px;
@@ -206,6 +342,7 @@ cursor: pointer;
 }
 
 /* error */
+
 .hold_form p{
  visibility: hidden;
  color: red;
@@ -214,3 +351,31 @@ cursor: pointer;
 /* @media only screen and (min-width: 481px) and (max-width: 768px) {
 
 } */
+
+.hold_form p {
+  visibility: hidden;
+  color: red;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  div#popup.overlay {
+    width: 100%;
+    position: fixed;
+    display: none;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlayColor);
+    z-index: 2;
+  }
+  .new_main {
+    position: absolute;
+    width: 616px;
+    /* height: 1424px; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--select-background);
+    overflow: auto;
+    max-height: 100vh;
+  }
+}

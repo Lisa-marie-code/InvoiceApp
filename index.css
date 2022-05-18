@@ -42,6 +42,161 @@ body {
   --status: #33d69f;
   --statBG: #e4f7f0;
   --cardBG: #fff;
+  --paymentBG: #fff;
+}
+
+/* Desktop view */
+.header {
+  width: 103px;
+  height: 1000px;
+  top: 0px;
+  left: 0px;
+  background-color: var(--middark);
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr 1fr;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 28px;
+}
+.user img {
+  border-radius: 50%;
+  width: 40%;
+}
+.header div * {
+  margin: 40px auto 0 30px;
+}
+.card:hover{
+  border: 2px solid var(--mainblue);
+  cursor: pointer;
+}
+#logo {
+  background-image: url(/starter-code/brand-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#color_mode {
+  border-bottom: 1px solid #6b6565;
+  cursor: pointer;
+}
+.new_bar {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  position: absolute;
+  width: 730px;
+  height: 59px;
+  left: 355px;
+  top: 72px;
+  padding: 10px;
+}
+select {
+  border: 0px;
+  outline: 0px;
+  font-weight: 600;
+  background-color: var(--filter);
+}
+#invoiceNum {
+  color: var(--grayblue);
+  line-height: 20px;
+}
+.invoices p span {
+  display: inline-block;
+}
+.selectBox {
+  position: relative;
+}
+
+.selectBox select option span {
+  display: none;
+}
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+#checkboxes {
+  display: none;
+  background-color: var(--checkbox-background);
+  width: 192px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: #979797 0px 4px 12px;
+}
+#checkboxes label {
+  display: block;
+  padding: 10px;
+  color: var(--label-text);
+}
+.create_new label {
+  display: flex;
+  background-color: var(--mainblue);
+  width: 140px;
+  height: 38px;
+  border-radius: 80px;
+  align-items: center;
+  padding: 5px;
+}
+.create_new label:hover {
+  background-color: var(--midblue);
+  cursor: pointer;
+}
+.create_new img {
+  background-color: var(--lightBG);
+  border-radius: 50px;
+  padding: 10px;
+}
+.create_new p {
+  color: var(--lightBG);
+  font-weight: 600;
+  padding: 10px;
+}
+/* Invoice */
+.card{
+position: relative;
+width: 730px;
+margin: 30px auto 0 360px;
+background-color: var(--cardBG);
+border-radius: 8px;
+display: grid;
+grid-template-columns: 1fr 2fr 1fr 2fr 1fr .5fr;
+box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+}
+
+.mcontainer{
+  margin-top: 180px;
+    position: relative;
+}
+
+.idenNum,
+.dueDate,
+.amt,
+.clientname,
+.arrowImage {
+  display: inline;
+  margin: 30px auto 30px auto;
+  color: var(--text-color);
+}
+.payment {
+  margin-top: 15px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.roundStatus{
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #000;
+  display: grid;
+  position: absolute;
+  
+}
+#netdays option{
+  background-color: var(--paymentBG);
 }
 
 /* Desktop view */
@@ -216,6 +371,10 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   position: relative;
   top: 20px;
   left: 20px;
+   margin-top: 120px;
+   position: relative;
+  }
+
 }
   .idenNum {
     position: relative;
@@ -251,7 +410,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     color: var(--text-color);
   }
 
-  .client {
+  .clientname {
     position: relative;
     top: 5px;
     left: 5px;
@@ -298,6 +457,7 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .header div * {
     margin: 20px auto 0 20px;
   }
+  
   #logo {
     background-color: var(--midblue);
     height: 72px;
@@ -308,6 +468,8 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   #color_mode {
     border-right: 1px solid #6b6565;
     border-bottom: none;
+
+    cursor: pointer;
   }
   /* newbar filter styling */
   .new_bar {
@@ -330,7 +492,17 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .create_new p span {
     display: none;
   }
-  
+
+  .create_new p span {
+    display: none;
+  }
+  .create_new img{
+    padding: 10px;
+  }
+  .create_new p{
+    padding: 5px;
+  }
+
 }
 
 /* tablet view */
@@ -356,6 +528,8 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   .dueDate,
   .amt,
   .client {
+  .clientname {
+
     display: inline;
     margin: 30px auto 0 auto;
     color: var(--text-color);
@@ -378,13 +552,14 @@ box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     grid-template-columns: 1fr 3fr 1fr 1fr;
   }
   .header div * {
-    margin: 30px auto 0 50px;
+    margin: 30px auto 0 30px;
   }
   #logo {
     background-color: var(--midblue);
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
-
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
     height: 80px;
   }
   .user img {
