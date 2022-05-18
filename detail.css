@@ -1,0 +1,154 @@
+/* @import "index.css"; */
+
+.st-div{
+    position: relative;
+    margin: 50px auto 0 auto;
+    width: 327px;
+    background-color: white;
+    height: 91px;
+    border-radius: 5px;
+  
+    align-content: center;
+    visibility: hidden;
+}
+
+.statuses{
+    
+        position: relative;
+        top: 20px;
+        left: 180px;
+        width: 104px;
+        height: 40px;
+        border-radius: 5px;
+        border-style: none;
+        text-align: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.25px;
+      }
+    
+
+.status-div{
+   
+    margin: 15px auto 0 auto;
+    border-radius: 5px;
+    width: 327px;
+    background-color: white;
+    visibility: hidden;
+    padding: 20px;
+    font-family: 'Spartan';
+    font-style: normal;
+    color: #7E88C3;
+
+}
+
+.group1{
+    margin-bottom:20px ;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+}
+
+.group2{
+    margin-bottom:20px ;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+}
+
+.group3{
+    margin-bottom:20px ;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: -0.229167px;
+    
+}
+
+.group4{
+    margin-bottom:20px ;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: -0.229167px;
+}
+
+.group5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+#bold{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.3125px;
+    color: #0C0E16;
+
+}
+
+.dtclientemail{
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+}
+
+.dtitemgroup{
+    margin-top: 50px;
+}
+
+.dtitems{
+    background-color: #F9FAFE;
+    padding: 25px;
+}
+#bold-two{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+   
+
+}
+
+.gtotal{
+    background-color: #373B53;
+    color: #FFFFFF;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-family: 'Spartan';
+    font-style: normal;
+    border-radius: 0px 0px 8px 8px
+}
+
+.totalamount{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: -0.416667px;
+}
+
+.grandtotal{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+
+}
+/* .new_bar{
+    visibility: hidden;
+} */
